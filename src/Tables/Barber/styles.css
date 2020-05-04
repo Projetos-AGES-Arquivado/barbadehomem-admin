@@ -1,0 +1,7 @@
+.barber-list tr {
+  transition: background-color 0.2s;
+}
+
+.barber-list table {
+  width: 100%;
+}
