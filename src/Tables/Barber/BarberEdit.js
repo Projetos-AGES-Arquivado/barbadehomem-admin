@@ -5,26 +5,15 @@ import {
   TabbedForm,
   FormTab,
   TextInput,
-  TextField,
   DateInput,
-  ReferenceManyField,
-  Datagrid,
+  SelectInput,
 } from "react-admin";
 
 const BarberEditTitle = ({ record }) => {
   return <span>{record ? `${record.name}` : ""}</span>;
 };
 
-export const BarberEdit = (props) => {
-  const [id, setId] = useState(props.id);
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [birthday, setBirthday] = useState(Date);
-  const [transport, setTransport] = useState("");
-  const [email, setEmail] = useState("");
-
-  function handleSubmit() {}
-
+const BarberEdit = (props) => {
   return (
     <Edit {...props} title={<BarberEditTitle />} className="barber-list">
       <TabbedForm submitOnEnter={false}>
@@ -32,22 +21,28 @@ export const BarberEdit = (props) => {
           <TextInput source="name" />
           <TextInput source="phone" />
           <DateInput source="birthday" />
-          <TextInput source="transport" />
+          <SelectInput
+            source="transport"
+            choices={[
+              { id: "Carro", name: "Carro" },
+              { id: "Carro", name: "Moto" },
+            ]}
+          />
           <TextInput source="email" />
         </FormTab>
 
         <FormTab label="Endereço">
-          <ReferenceManyField
-            label=""
-            reference="barbers_addresses"
-            target="barberId"
-          >
-            <Datagrid>
-              <TextField source="street" label="Rua" />
-            </Datagrid>
-          </ReferenceManyField>
+          <FormTab label="Endereço">
+            <TextInput source="address.city" />
+            <TextInput source="address.district" />
+            <TextInput source="address.street" />
+            <TextInput source="address.number" />
+            <TextInput source="address.complement" />
+          </FormTab>
         </FormTab>
       </TabbedForm>
     </Edit>
   );
 };
+
+export default BarberEdit;

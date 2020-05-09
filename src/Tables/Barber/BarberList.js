@@ -9,20 +9,25 @@ import {
   EditButton,
 } from "react-admin";
 
-export const BarberList = (props) => (
-  <List {...props} className="barber-list">
-    <Datagrid>
-      <TextField source="name" />
-      <TextField source="phone" />
-      <DateField source="birthday" locales="pt-BR" />
-      <TextField source="transport" />
-      <EmailField source="email" />
+export const BarberList = (props) => {
+  return (
+    <List {...props} className="barber-list">
+      <Datagrid>
+        <TextField source="name" />
+        <TextField source="phone" />
 
-      <TextField source="address.street" />
+        <DateField
+          source="birthday"
+          locales="pt-BR"
+          options={{ timeZone: "UTC" }}
+        />
 
-      <EditButton label="Detalhes" />
-    </Datagrid>
-  </List>
-);
+        <TextField source="transport" />
+        <EmailField source="email" />
+        <EditButton label="Detalhes" />
+      </Datagrid>
+    </List>
+  );
+};
 
 export default BarberList;

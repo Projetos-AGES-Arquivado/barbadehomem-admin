@@ -8,10 +8,17 @@ import {
   TabbedForm,
 } from "react-admin";
 
-const BarberCreate = ({ createda_at, props }) => {
+import "./styles.css";
+
+const BarberCreate = (props) => {
+  function validate(data) {
+    console.log(data);
+    return {};
+  }
+
   return (
     <Create {...props}>
-      <TabbedForm redirect="../barbers_addresses/:id">
+      <TabbedForm validate={validate}>
         <FormTab label="Perfil">
           <TextInput source="name" />
           <TextInput source="email" type="email" />
@@ -21,8 +28,8 @@ const BarberCreate = ({ createda_at, props }) => {
           <SelectInput
             source="transport"
             choices={[
-              { id: "car", name: "Carro" },
-              { id: "motorcycle", name: "Moto" },
+              { id: "Carro", name: "Carro" },
+              { id: "Carro", name: "Moto" },
             ]}
           />
         </FormTab>
@@ -31,6 +38,7 @@ const BarberCreate = ({ createda_at, props }) => {
           <TextInput source="address.district" />
           <TextInput source="address.street" />
           <TextInput source="address.number" />
+          <TextInput source="address.complement" />
         </FormTab>
       </TabbedForm>
     </Create>
