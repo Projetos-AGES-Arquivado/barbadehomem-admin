@@ -13,6 +13,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 
 setImmediate(async () => {
+  
   // cria barbeiro
   await firestore.collection('barbers').add({
     name: 'Maria',
