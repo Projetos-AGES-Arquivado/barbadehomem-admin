@@ -1,0 +1,11 @@
+.barber-list tr {
+  transition: background-color 0.2s;
+}
+
+.barber-list table {
+  width: 100%;
+}
+
+.form-address {
+  margin-right: 15px;
+}
