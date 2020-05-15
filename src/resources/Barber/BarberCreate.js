@@ -11,7 +11,6 @@ import {
 import './styles.css';
 
 const BarberCreate = (props) => {
-
   return (
     <Create {...props}>
       <TabbedForm>
