@@ -9,9 +9,11 @@ import {
   EditButton,
 } from "react-admin";
 
-export const BarberList = (props) => {
+import "./styles.css";
+
+export const CustomerList = (props) => {
   return (
-    <List {...props} className="barber-list" bulkActionButtons={false}>
+    <List {...props} className="customer-list" bulkActionButtons={false}>
       <Datagrid>
         <TextField source="name" />
         <TextField source="phone" />
@@ -22,7 +24,6 @@ export const BarberList = (props) => {
           options={{ timeZone: "UTC" }}
         />
 
-        <TextField source="transport" />
         <EmailField source="email" />
         <EditButton label="Detalhes" />
       </Datagrid>
@@ -30,4 +31,4 @@ export const BarberList = (props) => {
   );
 };
 
-export default BarberList;
+export default CustomerList;

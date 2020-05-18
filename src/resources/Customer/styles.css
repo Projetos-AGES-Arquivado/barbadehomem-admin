@@ -1,0 +1,11 @@
+.customer-list tr {
+  transition: background-color 0.2s;
+}
+
+.customer-list table {
+  width: 100%;
+}
+
+.form-address {
+  margin-right: 15px;
+}
