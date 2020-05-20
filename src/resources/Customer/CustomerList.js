@@ -13,7 +13,12 @@ import "./styles.css";
 
 export const CustomerList = (props) => {
   return (
-    <List {...props} className="customer-list" bulkActionButtons={false}>
+    <List
+      {...props}
+      className="customer-list"
+      bulkActionButtons={false}
+      filter={{ isAdmin: false }}
+    >
       <Datagrid>
         <TextField source="name" />
         <TextField source="phone" />
