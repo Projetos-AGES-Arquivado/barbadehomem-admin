@@ -6,6 +6,7 @@ import { authProvider } from './providers/auth-provider';
 
 import Login from './resources/Login';
 import Barber from './resources/Barber';
+import Request from './resources/Request'
 
 const App = () => (
   <Admin
@@ -16,6 +17,7 @@ const App = () => (
   >
     <Resource name='users' list={ListGuesser} />
     <Resource name='barbers' {...Barber} />
+    <Resource name='appointments' {...Request} />
     <Resource name='barbers_addresses' />
   </Admin>
 );

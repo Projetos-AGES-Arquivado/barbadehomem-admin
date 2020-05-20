@@ -30,6 +30,15 @@ const messages = {
           },
         },
       },
+      appointments: {
+        name: 'Solicitacoes',
+        fields: {
+          cost: 'Preco',
+          date: 'Data agendada',
+          status: 'Status',
+          services: 'servicos'
+        },
+      },
     },
   }),
 };
