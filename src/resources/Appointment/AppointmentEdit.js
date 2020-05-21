@@ -1,21 +1,20 @@
 import React from "react";
 
 import {
-  List,
-  Datagrid,
   TextField,
-  DateField,
-  ChipField,
-  NumberField,
-  EditButton,
-  ArrayField,
   ReferenceField,
   Edit,
-  SimpleForm,
-  TextInput,
   SelectInput,
   ReferenceInput,
+  Toolbar,
+  SaveButton,
+  TabbedForm,
+  FormTab,
 } from "react-admin";
+
+import { KeyboardDateTimeInput } from "@sklinet/react-admin-date-inputs";
+
+import ServicesField from "../../components/ServicesField";
 
 import "./styles.css";
 
@@ -23,34 +22,61 @@ const AppointmentEditTitle = ({ record }) => {
   return <span>{record ? `${record.name}` : ""}</span>;
 };
 
+const AppointmentEditToolbar = (props) => (
+  <Toolbar {...props}>
+    <SaveButton label="Salvar" redirect="list" submitOnEnter={false} />
+  </Toolbar>
+);
+
 export const AppointmentEdit = (props) => {
   return (
-    <Edit {...props} title={<AppointmentEditTitle />}>
-      <SimpleForm>
-        <ReferenceField
-          source="userId"
-          reference="users"
-          label="Cliente"
-          link={false}
-        >
-          <TextField source="name" />
-        </ReferenceField>
+    <Edit undoable={false} {...props} title={<AppointmentEditTitle />}>
+      <TabbedForm toolbar={<AppointmentEditToolbar />}>
+        <FormTab label="Atendimento">
+          <ReferenceField
+            source="userId"
+            reference="users"
+            label="Cliente"
+            link={false}
+          >
+            <TextField className="name-input" source="name" />
+          </ReferenceField>
 
-        <ReferenceInput source="barberId" reference="barbers" label="Barbeiro">
-          <SelectInput optionText="name" />
-        </ReferenceInput>
-        <TextField source="cost" />
+          <ReferenceInput
+            source="barberId"
+            reference="barbers"
+            label="Barbeiro"
+          >
+            <SelectInput optionText="name" />
+          </ReferenceInput>
 
-        <SelectInput
-          source="status"
-          choices={[
-            { id: "pending", name: "Em análise" },
-            { id: "booked", name: "Agendado" },
-            { id: "done", name: "Conluído" },
-            { id: "canceled", name: "Cancelado" },
-          ]}
-        />
-      </SimpleForm>
+          <KeyboardDateTimeInput
+            source="date"
+            label="Agendado para"
+            options={{
+              format: "dd/MM/yyyy, HH:mm",
+              ampm: false,
+              clearable: true,
+            }}
+          />
+
+          <SelectInput
+            source="status"
+            choices={[
+              { id: "pending", name: "Em análise" },
+              { id: "booked", name: "Agendado" },
+              { id: "done", name: "Concluído" },
+              { id: "canceled", name: "Cancelado" },
+            ]}
+          />
+        </FormTab>
+
+        <FormTab label="Serviços">
+          <TextField source="cost" />
+
+          <ServicesField source="services" />
+        </FormTab>
+      </TabbedForm>
     </Edit>
   );
 };

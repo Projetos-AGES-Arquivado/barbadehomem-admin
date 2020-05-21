@@ -12,3 +12,14 @@ export const statusParser = (v) => {
       return null;
   }
 };
+
+export const formattedServices = (services) => {
+  const formattedServices = services.reduce((text, next, index) => {
+    if (index > 0) {
+      return text + ` + ${next}`;
+    }
+
+    return text + next;
+  }, "");
+  return formattedServices;
+};

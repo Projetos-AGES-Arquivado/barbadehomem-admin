@@ -5,10 +5,7 @@ import {
   Datagrid,
   TextField,
   DateField,
-  ChipField,
-  NumberField,
   EditButton,
-  ArrayField,
   ReferenceField,
 } from "react-admin";
 
@@ -18,7 +15,7 @@ import StatusInput from "../../components/StatusInput";
 
 export const AppointmentList = (props) => {
   return (
-    <List {...props} bulkActionButtons={false} sort={{ field: "status" }}>
+    <List {...props} bulkActionButtons={false}>
       <Datagrid>
         <ReferenceField
           source="userId"

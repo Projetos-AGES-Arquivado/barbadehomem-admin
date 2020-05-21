@@ -1,6 +1,6 @@
 import React from "react";
 import { statusParser } from "../../utils";
-import { ChipField } from "react-admin";
+import { ChipField, TextField } from "react-admin";
 
 const StatusInput = (props) => {
   const status = props.record.status;
@@ -9,7 +9,7 @@ const StatusInput = (props) => {
 
   return (
     <>
-      <ChipField {...props} />
+      <TextField {...props} />
     </>
   );
 };
