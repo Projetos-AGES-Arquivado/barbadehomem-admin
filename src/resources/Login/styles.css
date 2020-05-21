@@ -1,12 +1,10 @@
-/* body {
-  background: rgb(34, 131, 195);
-  background: linear-gradient(
-    90deg,
-    rgba(34, 131, 195, 1) 0%,
-    rgba(45, 106, 253, 1) 34%
-  );
-} */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: 0;
+}
 
 body {
   width: 100%;
@@ -21,75 +19,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.form {
-  background-color: #fff;
-  height: 40%;
-  width: 80%;
-  max-width: 600px;
-  box-shadow: 0 4px 8px 0 rgba(100, 97, 97, 0.2),
-    0 6px 20px 0 rgba(100, 97, 97, 0.2);
-  display: inline-block;
+.login-container button{
+  margin-top: 30px;
 }
 
-.div {
-  text-align: center;
-  margin-top: 200px;
+.login-container input:last-child{
+  margin-top: 15px;
 }
 
-.lockerDiv {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.login-container form{
+  width: 500px;
 }
 
-.locker {
-  font-size: 25px;
-}
-
-.locker::before {
-  content: '\01F512';
-}
-
-.emailDiv {
-  margin-top: 10px;
-}
-
-.passwordDiv {
-  padding-top: 20px;
-  padding-bottom: 35px;
-}
-
-.input {
-  font-size: 16px;
-  border: none;
-  height: 30px;
-  width: 80%;
-  border-bottom: 1px solid rgb(109, 108, 108);
-  color: #030303;
-  margin: auto;
-}
-
-.button {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: none;
+.login-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 40px;
-  background: rgb(10, 137, 221);
-  color: #fff;
-  cursor: pointer;
-  transition: all 400ms ease;
-  font-size: 16px;
-}
-
-.button:hover {
-  background: rgb(0, 0, 0, 0);
-  color: rgb(10, 137, 221);
-  box-shadow: inset 0 0 0 1px rgb(10, 137, 221);
-}
-
-form {
-  animation-name: fade;
-  animation-duration: 1s;
-  overflow: hidden;
+  height: 100vh;
+  padding: 0 15%;
+  flex-wrap: 1;
+  flex-shrink: 1;
 }
 
 @keyframes fade {
@@ -101,17 +51,7 @@ form {
     opacity: 1;
   }
 }
-form .input {
-  animation: move 500ms;
-  animation-delay: 350ms;
-  animation-fill-mode: backwards;
-}
 
-form .button {
-  animation: move 500ms;
-  animation-delay: 350ms;
-  animation-fill-mode: backwards;
-}
 @keyframes move {
   from {
     opacity: 0;

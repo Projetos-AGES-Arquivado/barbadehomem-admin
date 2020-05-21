@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useLogin, useNotify, Notification } from "react-admin";
 import "./styles.css";
+import LogoImg from "./logo.png";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,39 +18,31 @@ const Login = () => {
   };
 
   return (
-    <div className="div">
-      <div className="div">
+
+      <div className="login-container">
+
+          <img src = {LogoImg} alt = "logo"/>
+
         <form className="form" onSubmit={submit}>
-          <div className="lockerDiv">
-            <span className="locker"></span>
-          </div>
-          <div className="emailDiv">
-            <input
-              className="input"
-              name="email"
+            <Input
               type="email"
               value={email}
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-          <div className="passwordDiv">
-            <input
-              className="input"
-              name="password"
+            <Input
               autoComplete="password"
               type="password"
               value={password}
               placeholder="Senha"
               onChange={(e) => setPassword(e.target.value)}
             />
-          </div>
-          <button className="button">Entrar</button>
+          <Button> Entrar </Button>
         </form>
 
         <Notification />
       </div>
-    </div>
+
   );
 };
 
