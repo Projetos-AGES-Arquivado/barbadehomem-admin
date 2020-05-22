@@ -1,12 +1,12 @@
-import React from "react";
-import { Admin, Resource, ListGuesser } from "react-admin";
-import { dataProvider } from "./providers/firebase-provider";
-import { i18nProvider } from "./providers/i18n-provider";
-import { authProvider } from "./providers/auth-provider";
+import React from 'react';
+import { Admin, Resource } from 'react-admin';
+import { dataProvider } from './providers/firebase-provider';
+import { i18nProvider } from './providers/i18n-provider';
+import { authProvider } from './providers/auth-provider';
 
-import Login from "./resources/Login";
-import Barber from "./resources/Barber";
-import Customer from "./resources/Customer";
+import Login from './resources/Login';
+import Barber from './resources/Barber';
+import Customer from './resources/Customer';
 
 const App = () => (
   <Admin

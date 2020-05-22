@@ -1,10 +1,10 @@
-import IMask from "imask";
+import IMask from 'imask';
 
-export const phoneParser = (v) => {
+export const phoneParser = v => {
   if (v === undefined) return;
 
   const masked = IMask.createMask({
-    mask: "(00) 00000-0000",
+    mask: '(00) 00000-0000',
     lazy: true,
   });
 

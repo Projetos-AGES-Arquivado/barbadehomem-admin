@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 import {
   Edit,
   TabbedForm,
@@ -7,14 +6,14 @@ import {
   TextInput,
   DateInput,
   SelectInput,
-} from "react-admin";
-import { phoneParser } from "../utils";
+} from 'react-admin';
+import { phoneParser } from '../utils';
 
 const BarberEditTitle = ({ record }) => {
-  return <span>{record ? `${record.name}` : ""}</span>;
+  return <span>{record ? `${record.name}` : ''}</span>;
 };
 
-const BarberEdit = (props) => {
+const BarberEdit = props => {
   return (
     <Edit {...props} title={<BarberEditTitle />} className="barber-list">
       <TabbedForm submitOnEnter={false}>
@@ -29,8 +28,8 @@ const BarberEdit = (props) => {
           <SelectInput
             source="transport"
             choices={[
-              { id: "Carro", name: "Carro" },
-              { id: "Carro", name: "Moto" },
+              { id: 'Carro', name: 'Carro' },
+              { id: 'Carro', name: 'Moto' },
             ]}
           />
           <TextInput source="email" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   List,
@@ -7,9 +7,9 @@ import {
   DateField,
   EmailField,
   EditButton,
-} from "react-admin";
+} from 'react-admin';
 
-export const BarberList = (props) => {
+export const BarberList = props => {
   return (
     <List {...props} className="barber-list" bulkActionButtons={false}>
       <Datagrid>
@@ -19,7 +19,7 @@ export const BarberList = (props) => {
         <DateField
           source="birthday"
           locales="pt-BR"
-          options={{ timeZone: "UTC" }}
+          options={{ timeZone: 'UTC' }}
         />
 
         <TextField source="transport" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   List,
@@ -7,11 +7,11 @@ import {
   DateField,
   EmailField,
   EditButton,
-} from "react-admin";
+} from 'react-admin';
 
-import "./styles.css";
+import './styles.css';
 
-export const CustomerList = (props) => {
+export const CustomerList = props => {
   return (
     <List
       {...props}
@@ -26,7 +26,7 @@ export const CustomerList = (props) => {
         <DateField
           source="birthday"
           locales="pt-BR"
-          options={{ timeZone: "UTC" }}
+          options={{ timeZone: 'UTC' }}
         />
 
         <EmailField source="email" />

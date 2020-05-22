@@ -19,19 +19,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.login-container button{
+.login-container button {
   margin-top: 30px;
 }
 
-.login-container input:last-child{
+.login-container input:last-child {
   margin-top: 15px;
 }
 
-.login-container form{
+.login-container form {
   width: 500px;
 }
 
-.login-container{
+.login-container {
   display: flex;
   align-items: center;
   justify-content: space-between;

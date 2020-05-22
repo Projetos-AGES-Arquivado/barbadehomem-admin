@@ -1,6 +1,6 @@
-import PersonIcon from "@material-ui/icons/Person";
+import PersonIcon from '@material-ui/icons/Person';
 
-import CustomerList from "./CustomerList";
+import CustomerList from './CustomerList';
 
 export default {
   list: CustomerList,
