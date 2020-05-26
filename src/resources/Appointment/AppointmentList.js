@@ -36,7 +36,6 @@ export const AppointmentList = (props) => {
         </ReferenceField>
 
         <StatusInput source="status" />
-
         <DateField
           source="date"
           locales="pt-BR"

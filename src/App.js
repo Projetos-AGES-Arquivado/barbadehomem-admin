@@ -18,6 +18,7 @@ const App = () => (
     <Resource name="users" list={ListGuesser} />
     <Resource name="barbers" {...Barber} />
     <Resource name="appointments" {...Appointment} />
+    <Resource name="users_addresses"/>
     <Resource name="barbers_addresses" />
   </Admin>
 );

@@ -76,6 +76,36 @@ export const AppointmentEdit = (props) => {
 
           <ServicesField source="services" />
         </FormTab>
+        <FormTab label="Endereco" >
+          <ReferenceField
+            source="addressId"
+            reference="users_addresses"
+            label="Rua"
+          >
+            <TextField source="street" />
+          </ReferenceField>
+          <ReferenceField
+            source="addressId"
+            reference="users_addresses"
+            label="Bairro"
+          >
+            <TextField source="district" />
+          </ReferenceField>
+          <ReferenceField
+            source="addressId"
+            reference="users_addresses"
+            label="Numero"
+          >
+            <TextField source="num" />
+          </ReferenceField>
+          <ReferenceField
+            source="addressId"
+            reference="users_addresses"
+            label="Complemento"
+          >
+            <TextField source="complement" />
+          </ReferenceField>
+        </FormTab>
       </TabbedForm>
     </Edit>
   );
