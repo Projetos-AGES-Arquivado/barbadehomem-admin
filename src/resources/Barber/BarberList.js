@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import {
   List,
@@ -7,24 +7,24 @@ import {
   DateField,
   EmailField,
   EditButton,
-} from 'react-admin';
+} from "react-admin";
 
 export const BarberList = (props) => {
   return (
-    <List {...props} className='barber-list'>
+    <List {...props} className="barber-list">
       <Datagrid>
-        <TextField source='name' />
-        <TextField source='phone' />
+        <TextField source="name" />
+        <TextField source="phone" />
 
         <DateField
-          source='birthday'
-          locales='pt-BR'
-          options={{ timeZone: 'UTC' }}
+          source="birthday"
+          locales="pt-BR"
+          options={{ timeZone: "UTC" }}
         />
 
-        <TextField source='transport' />
-        <EmailField source='email' />
-        <EditButton label='Detalhes' />
+        <TextField source="transport" />
+        <EmailField source="email" />
+        <EditButton label="Detalhes" />
       </Datagrid>
     </List>
   );

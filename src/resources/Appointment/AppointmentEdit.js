@@ -10,6 +10,7 @@ import {
   SaveButton,
   TabbedForm,
   FormTab,
+  NumberField,
 } from "react-admin";
 
 import { KeyboardDateTimeInput } from "@sklinet/react-admin-date-inputs";
@@ -39,7 +40,16 @@ export const AppointmentEdit = (props) => {
             label="Cliente"
             link={false}
           >
-            <TextField className="name-input" source="name" />
+            <TextField className="customer-input" source="name" />
+          </ReferenceField>
+
+          <ReferenceField
+            source="userId"
+            reference="users"
+            label="Contato"
+            link={false}
+          >
+            <TextField className="customer-input" source="phone" />
           </ReferenceField>
 
           <ReferenceInput
@@ -72,15 +82,19 @@ export const AppointmentEdit = (props) => {
         </FormTab>
 
         <FormTab label="Serviços">
-          <TextField source="cost" />
+          <NumberField
+            source="cost"
+            options={{ style: "currency", currency: "BRL" }}
+          />
 
           <ServicesField source="services" />
         </FormTab>
-        <FormTab label="Endereco" >
+        <FormTab label="Endereco">
           <ReferenceField
             source="addressId"
             reference="users_addresses"
             label="Rua"
+            link={false}
           >
             <TextField source="street" />
           </ReferenceField>
@@ -88,13 +102,15 @@ export const AppointmentEdit = (props) => {
             source="addressId"
             reference="users_addresses"
             label="Bairro"
+            link={false}
           >
             <TextField source="district" />
           </ReferenceField>
           <ReferenceField
             source="addressId"
             reference="users_addresses"
-            label="Numero"
+            label="Número"
+            link={false}
           >
             <TextField source="num" />
           </ReferenceField>
@@ -102,6 +118,7 @@ export const AppointmentEdit = (props) => {
             source="addressId"
             reference="users_addresses"
             label="Complemento"
+            link={false}
           >
             <TextField source="complement" />
           </ReferenceField>

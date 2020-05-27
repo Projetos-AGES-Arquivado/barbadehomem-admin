@@ -2,7 +2,7 @@ import React from "react";
 import { statusParser } from "../../utils";
 import { ChipField, TextField } from "react-admin";
 
-const StatusInput = (props) => {
+const StatusField = (props) => {
   const status = props.record.status;
 
   props.record.status = statusParser(status);
@@ -14,4 +14,4 @@ const StatusInput = (props) => {
   );
 };
 
-export default StatusInput;
+export default StatusField;

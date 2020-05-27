@@ -1,4 +1,4 @@
-import PersonIcon from "@material-ui/icons/Person";
+import Schedule from "@material-ui/icons/Schedule";
 
 import AppointmentList from "./AppointmentList";
 import AppointmentEdit from "./AppointmentEdit";
@@ -6,5 +6,5 @@ import AppointmentEdit from "./AppointmentEdit";
 export default {
   list: AppointmentList,
   edit: AppointmentEdit,
-  icon: PersonIcon,
+  icon: Schedule,
 };

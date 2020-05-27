@@ -15,7 +15,7 @@ const BarberEditTitle = ({ record }) => {
 
 const BarberEdit = (props) => {
   return (
-    <Edit {...props} title={<BarberEditTitle />} className="barber-list">
+    <Edit {...props} title={<BarberEditTitle />}>
       <TabbedForm submitOnEnter={false}>
         <FormTab label="Perfil">
           <TextInput source="name" />

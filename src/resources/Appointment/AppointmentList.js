@@ -11,11 +11,11 @@ import {
 
 import "./styles.css";
 
-import StatusInput from "../../components/StatusInput";
+import StatusField from "../../components/StatusField";
 
 export const AppointmentList = (props) => {
   return (
-    <List {...props} bulkActionButtons={false}>
+    <List {...props} bulkActionButtons={false} className="appointment-list">
       <Datagrid>
         <ReferenceField
           source="userId"
@@ -35,7 +35,8 @@ export const AppointmentList = (props) => {
           <TextField source="name" />
         </ReferenceField>
 
-        <StatusInput source="status" />
+        <StatusField source="status" sortBy="status" />
+
         <DateField
           source="date"
           locales="pt-BR"
