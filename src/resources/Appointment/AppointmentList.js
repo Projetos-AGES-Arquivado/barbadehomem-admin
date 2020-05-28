@@ -2,20 +2,43 @@ import React from "react";
 
 import {
   List,
+  Filter,
   Datagrid,
   TextField,
   DateField,
   EditButton,
   ReferenceField,
+  SelectInput,
+  DateInput,
 } from "react-admin";
 
 import "./styles.css";
 
 import StatusField from "../../components/StatusField";
 
+const AppointmentFilter = (props) => (
+  <Filter {...props}>
+    <SelectInput
+      source="status"
+      choices={[
+        { id: "pending", name: "Em análise" },
+        { id: "booked", name: "Agendado" },
+        { id: "done", name: "Concluído" },
+        { id: "canceled", name: "Cancelado" },
+      ]}
+      alwaysOn
+    />
+  </Filter>
+);
+
 export const AppointmentList = (props) => {
   return (
-    <List {...props} bulkActionButtons={false} className="appointment-list">
+    <List
+      {...props}
+      filters={<AppointmentFilter />}
+      bulkActionButtons={false}
+      className="appointment-list"
+    >
       <Datagrid>
         <ReferenceField
           source="userId"
