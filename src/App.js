@@ -6,6 +6,7 @@ import { authProvider } from './providers/auth-provider';
 
 import Login from './resources/Login';
 import Barber from './resources/Barber';
+import Appointment from './resources/Appointment';
 import Customer from './resources/Customer';
 
 const App = () => (
@@ -15,9 +16,11 @@ const App = () => (
     authProvider={authProvider}
     loginPage={Login}
   >
+    <Resource name="appointments" {...Appointment} />
     <Resource name="users" {...Customer} />
     <Resource name="barbers" {...Barber} />
     <Resource name="barbers_addresses" />
+    <Resource name="users_addresses" />
   </Admin>
 );
 

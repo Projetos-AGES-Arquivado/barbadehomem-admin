@@ -14,7 +14,7 @@ const messages = {
         },
       },
       barbers: {
-        name: 'Barbeiros',
+        name: 'Barbeiro |||| Barbeiros',
         fields: {
           birthday: 'Data de nascimento',
           phone: 'Telefone',
@@ -28,6 +28,17 @@ const messages = {
             number: 'Número',
             complement: 'Complemento',
           },
+        },
+      },
+      appointments: {
+        name: 'Solicitação |||| Solicitações',
+        fields: {
+          cost: 'Preço',
+          date: 'Agendado para',
+          status: 'Situação',
+          services: 'Servicos',
+          customer: 'Cliente',
+          barber: 'Barbeiro',
         },
       },
     },

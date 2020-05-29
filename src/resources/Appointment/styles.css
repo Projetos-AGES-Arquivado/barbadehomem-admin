@@ -1,0 +1,7 @@
+.customer-input {
+  padding-left: 12px;
+}
+
+.appointment-list tr {
+  transition: background-color 0.2s;
+}
