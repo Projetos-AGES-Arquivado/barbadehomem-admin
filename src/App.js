@@ -12,13 +12,13 @@ const App = () => (
   <Admin
     dataProvider={dataProvider}
     i18nProvider={i18nProvider}
-    // authProvider={authProvider}
-    // loginPage={Login}
+    authProvider={authProvider}
+    loginPage={Login}
   >
     <Resource name="users" list={ListGuesser} />
     <Resource name="barbers" {...Barber} />
     <Resource name="appointments" {...Appointment} />
-    <Resource name="users_addresses"/>
+    <Resource name="users_addresses" />
     <Resource name="barbers_addresses" />
   </Admin>
 );

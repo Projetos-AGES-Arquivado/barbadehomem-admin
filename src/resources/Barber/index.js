@@ -1,8 +1,8 @@
-import PersonIcon from '@material-ui/icons/Person';
+import PersonIcon from "@material-ui/icons/Person";
 
-import BarberList from './BarberList';
-import BarberCreate from './BarberCreate';
-import BarberEdit from './BarberEdit';
+import BarberList from "./BarberList";
+import BarberCreate from "./BarberCreate";
+import BarberEdit from "./BarberEdit";
 
 export default {
   create: BarberCreate,

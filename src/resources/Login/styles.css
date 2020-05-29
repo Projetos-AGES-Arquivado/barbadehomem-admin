@@ -32,7 +32,7 @@ body {
 }
 
 .locker::before {
-  content: '\01F512';
+  content: "\01F512";
 }
 
 .emailDiv {
