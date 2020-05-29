@@ -7,17 +7,24 @@ import {
   FormTab,
   TabbedForm,
 } from 'react-admin';
+import { phoneParser } from '../utils';
 
 import './styles.css';
 
 const BarberCreate = props => {
   return (
     <Create {...props}>
-      <TabbedForm>
+      <TabbedForm redirect="list">
         <FormTab label="Perfil">
           <TextInput source="name" />
           <TextInput source="email" type="email" />
-          <TextInput source="phone" />
+
+          <TextInput
+            source="phone"
+            parse={phoneParser}
+            placeholder="(99) 99999-9999"
+          />
+
           <DateInput source="birthday" />
 
           <SelectInput
@@ -32,7 +39,7 @@ const BarberCreate = props => {
           <TextInput source="address.city" />
           <TextInput source="address.district" />
           <TextInput source="address.street" />
-          <TextInput source="address.number" />
+          <TextInput source="address.number" type="number" />
           <TextInput source="address.complement" />
         </FormTab>
       </TabbedForm>

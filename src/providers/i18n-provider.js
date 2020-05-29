@@ -5,7 +5,7 @@ const messages = {
   pt: Object.assign(portugueseMessages, {
     resources: {
       users: {
-        name: 'Usuário |||| Usuários',
+        name: 'Cliente |||| Clientes',
         fields: {
           birthday: 'Data de nascimento',
           phone: 'Telefone',

@@ -89,6 +89,7 @@ export const AppointmentEdit = props => {
 
           <ServicesField source="services" />
         </FormTab>
+
         <FormTab label="Endereco">
           <ReferenceField
             source="addressId"

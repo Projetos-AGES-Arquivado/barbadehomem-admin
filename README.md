@@ -3,8 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Getting start
 
 1. Clone the project using git;
-3. Run command `npm install`;
-4. Run command `npm start`;
+2. Run command `npm install`;
+3. Run command `npm start`;
 
 ## Available Scripts
 
