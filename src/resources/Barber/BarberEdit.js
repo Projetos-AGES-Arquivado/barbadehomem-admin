@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 import {
   Edit,
@@ -7,13 +7,13 @@ import {
   TextInput,
   DateInput,
   SelectInput,
-} from "react-admin";
+} from 'react-admin';
 
 const BarberEditTitle = ({ record }) => {
-  return <span>{record ? `${record.name}` : ""}</span>;
+  return <span>{record ? `${record.name}` : ''}</span>;
 };
 
-const BarberEdit = (props) => {
+const BarberEdit = props => {
   return (
     <Edit {...props} title={<BarberEditTitle />}>
       <TabbedForm submitOnEnter={false}>
@@ -24,8 +24,8 @@ const BarberEdit = (props) => {
           <SelectInput
             source="transport"
             choices={[
-              { id: "Carro", name: "Carro" },
-              { id: "Carro", name: "Moto" },
+              { id: 'Carro', name: 'Carro' },
+              { id: 'Carro', name: 'Moto' },
             ]}
           />
           <TextInput source="email" />

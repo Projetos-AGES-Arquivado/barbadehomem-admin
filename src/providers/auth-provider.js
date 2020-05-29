@@ -1,7 +1,7 @@
-import "firebase/auth";
+import 'firebase/auth';
 
-import * as firebase from "firebase/app";
-import { firebaseConfig } from "./firebase-provider";
+import * as firebase from 'firebase/app';
+import { firebaseConfig } from './firebase-provider';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -14,19 +14,19 @@ export const authProvider = {
   login: async ({ email, password }) => {
     const authResult = await auth.signInWithEmailAndPassword(email, password);
     const docUser = await firestore
-      .collection("users")
+      .collection('users')
       .doc(authResult.user.uid)
       .get();
-    if (docUser.exists && docUser.get("isAdmin")) {
+    if (docUser.exists && docUser.get('isAdmin')) {
       return authResult.user;
     }
-    throw new Error("Permissão insuficiente");
+    throw new Error('Permissão insuficiente');
   },
 
   logout: () => {
     return auth.signOut();
   },
-  checkError: (error) => {
+  checkError: error => {
     throw error;
   },
   getPermissions: async () => [],
@@ -35,6 +35,6 @@ export const authProvider = {
     if (user) {
       return user;
     }
-    throw new Error("Digite o seu login e senha");
+    throw new Error('Digite o seu login e senha');
   },
 };

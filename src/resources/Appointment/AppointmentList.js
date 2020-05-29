@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   List,
@@ -10,28 +10,28 @@ import {
   ReferenceField,
   SelectInput,
   DateInput,
-} from "react-admin";
+} from 'react-admin';
 
-import "./styles.css";
+import './styles.css';
 
-import StatusField from "../../components/StatusField";
+import StatusField from '../../components/StatusField';
 
-const AppointmentFilter = (props) => (
+const AppointmentFilter = props => (
   <Filter {...props}>
     <SelectInput
       source="status"
       choices={[
-        { id: "pending", name: "Em análise" },
-        { id: "booked", name: "Agendado" },
-        { id: "done", name: "Concluído" },
-        { id: "canceled", name: "Cancelado" },
+        { id: 'pending', name: 'Em análise' },
+        { id: 'booked', name: 'Agendado' },
+        { id: 'done', name: 'Concluído' },
+        { id: 'canceled', name: 'Cancelado' },
       ]}
       alwaysOn
     />
   </Filter>
 );
 
-export const AppointmentList = (props) => {
+export const AppointmentList = props => {
   return (
     <List
       {...props}
@@ -63,7 +63,7 @@ export const AppointmentList = (props) => {
         <DateField
           source="date"
           locales="pt-BR"
-          options={{ timeZone: "UTC" }}
+          options={{ timeZone: 'UTC' }}
         />
 
         <EditButton label="Detalhes" />

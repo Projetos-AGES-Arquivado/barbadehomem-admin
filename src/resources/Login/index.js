@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { useLogin, useNotify, Notification } from "react-admin";
-import "./styles.css";
+import React, { useState } from 'react';
+import { useLogin, useNotify, Notification } from 'react-admin';
+import './styles.css';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const login = useLogin();
   const notify = useNotify();
-  const submit = (e) => {
+  const submit = e => {
     e.preventDefault();
     login({ email, password }).catch(() =>
-      notify("Usuário ou senha inválidos")
+      notify('Usuário ou senha inválidos')
     );
   };
 
@@ -28,7 +28,7 @@ const Login = () => {
               type="email"
               value={email}
               placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={e => setEmail(e.target.value)}
             />
           </div>
           <div className="passwordDiv">
@@ -39,7 +39,7 @@ const Login = () => {
               type="password"
               value={password}
               placeholder="Senha"
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={e => setPassword(e.target.value)}
             />
           </div>
           <button className="button">Entrar</button>

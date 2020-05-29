@@ -1,7 +1,7 @@
-import React from "react";
-import { TextField } from "react-admin";
+import React from 'react';
+import { TextField } from 'react-admin';
 
-import { formattedServices } from "../../utils";
+import { formattedServices } from '../../utils';
 
 const ServicesField = ({ record, ...props }) => {
   const services = formattedServices(record.services);

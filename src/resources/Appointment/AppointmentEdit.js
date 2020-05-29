@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   TextField,
@@ -11,25 +11,25 @@ import {
   TabbedForm,
   FormTab,
   NumberField,
-} from "react-admin";
+} from 'react-admin';
 
-import { KeyboardDateTimeInput } from "@sklinet/react-admin-date-inputs";
+import { KeyboardDateTimeInput } from '@sklinet/react-admin-date-inputs';
 
-import ServicesField from "../../components/ServicesField";
+import ServicesField from '../../components/ServicesField';
 
-import "./styles.css";
+import './styles.css';
 
 const AppointmentEditTitle = ({ record }) => {
-  return <span>{record ? `${record.name}` : ""}</span>;
+  return <span>{record ? `${record.name}` : ''}</span>;
 };
 
-const AppointmentEditToolbar = (props) => (
+const AppointmentEditToolbar = props => (
   <Toolbar {...props}>
     <SaveButton label="Salvar" redirect="list" submitOnEnter={false} />
   </Toolbar>
 );
 
-export const AppointmentEdit = (props) => {
+export const AppointmentEdit = props => {
   return (
     <Edit undoable={false} {...props} title={<AppointmentEditTitle />}>
       <TabbedForm toolbar={<AppointmentEditToolbar />}>
@@ -64,7 +64,7 @@ export const AppointmentEdit = (props) => {
             source="date"
             label="Agendado para"
             options={{
-              format: "dd/MM/yyyy, HH:mm",
+              format: 'dd/MM/yyyy, HH:mm',
               ampm: false,
               clearable: true,
             }}
@@ -73,10 +73,10 @@ export const AppointmentEdit = (props) => {
           <SelectInput
             source="status"
             choices={[
-              { id: "pending", name: "Em análise" },
-              { id: "booked", name: "Agendado" },
-              { id: "done", name: "Concluído" },
-              { id: "canceled", name: "Cancelado" },
+              { id: 'pending', name: 'Em análise' },
+              { id: 'booked', name: 'Agendado' },
+              { id: 'done', name: 'Concluído' },
+              { id: 'canceled', name: 'Cancelado' },
             ]}
           />
         </FormTab>
@@ -84,7 +84,7 @@ export const AppointmentEdit = (props) => {
         <FormTab label="Serviços">
           <NumberField
             source="cost"
-            options={{ style: "currency", currency: "BRL" }}
+            options={{ style: 'currency', currency: 'BRL' }}
           />
 
           <ServicesField source="services" />

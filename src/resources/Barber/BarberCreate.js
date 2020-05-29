@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Create,
   DateInput,
@@ -6,11 +6,11 @@ import {
   SelectInput,
   FormTab,
   TabbedForm,
-} from "react-admin";
+} from 'react-admin';
 
-import "./styles.css";
+import './styles.css';
 
-const BarberCreate = (props) => {
+const BarberCreate = props => {
   return (
     <Create {...props}>
       <TabbedForm>
@@ -23,8 +23,8 @@ const BarberCreate = (props) => {
           <SelectInput
             source="transport"
             choices={[
-              { id: "Carro", name: "Carro" },
-              { id: "Moto", name: "Moto" },
+              { id: 'Carro', name: 'Carro' },
+              { id: 'Moto', name: 'Moto' },
             ]}
           />
         </FormTab>
