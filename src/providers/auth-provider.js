@@ -26,7 +26,7 @@ export const authProvider = {
   logout: () => {
     return auth.signOut();
   },
-  checkError: (error) => {
+  checkError: error => {
     throw error;
   },
   getPermissions: async () => [],

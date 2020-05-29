@@ -5,7 +5,7 @@ const messages = {
   pt: Object.assign(portugueseMessages, {
     resources: {
       users: {
-        name: 'Usuário |||| Usuários',
+        name: 'Cliente |||| Clientes',
         fields: {
           birthday: 'Data de nascimento',
           phone: 'Telefone',
@@ -14,7 +14,7 @@ const messages = {
         },
       },
       barbers: {
-        name: 'Barbeiros',
+        name: 'Barbeiro |||| Barbeiros',
         fields: {
           birthday: 'Data de nascimento',
           phone: 'Telefone',
@@ -30,11 +30,22 @@ const messages = {
           },
         },
       },
+      appointments: {
+        name: 'Solicitação |||| Solicitações',
+        fields: {
+          cost: 'Preço',
+          date: 'Agendado para',
+          status: 'Situação',
+          services: 'Servicos',
+          customer: 'Cliente',
+          barber: 'Barbeiro',
+        },
+      },
     },
   }),
 };
 
 export const i18nProvider = polyglotI18nProvider(
-  (locale) => messages[locale],
+  locale => messages[locale],
   'pt'
 );

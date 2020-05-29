@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { useLogin, useNotify, Notification } from 'react-admin';
 import './styles.css';
+import LogoImg from './logo.png';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const login = useLogin();
   const notify = useNotify();
-  const submit = (e) => {
+  const submit = e => {
     e.preventDefault();
     login({ email, password }).catch(() =>
       notify('Usuário ou senha inválidos')
@@ -15,38 +18,27 @@ const Login = () => {
   };
 
   return (
-    <div className='div'>
-      <div className='div'>
-        <form className='form' onSubmit={submit}>
-          <div className="lockerDiv">
-            <span className='locker'></span>
-          </div>
-          <div className='emailDiv'>
-            <input
-              className='input'
-              name='email'
-              type='email'
-              value={email}
-              placeholder='Email'
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className='passwordDiv'>
-            <input
-              className='input'
-              name='password'
-              autoComplete='password'
-              type='password'
-              value={password}
-              placeholder='Senha'
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button className='button'>Entrar</button>
-        </form>
+    <div className="login-container">
+      <img src={LogoImg} alt="logo" />
 
-        <Notification />
-      </div>
+      <form className="form" onSubmit={submit}>
+        <Input
+          type="email"
+          value={email}
+          placeholder="Email"
+          onChange={e => setEmail(e.target.value)}
+        />
+        <Input
+          autoComplete="password"
+          type="password"
+          value={password}
+          placeholder="Senha"
+          onChange={e => setPassword(e.target.value)}
+        />
+        <Button> Entrar </Button>
+      </form>
+
+      <Notification />
     </div>
   );
 };
