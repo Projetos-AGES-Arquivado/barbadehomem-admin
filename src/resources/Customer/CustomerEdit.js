@@ -3,15 +3,10 @@ import {
   Edit,
   TabbedForm,
   FormTab,
-  TextInput,
-  DateInput,
   ReferenceField,
   TextField,
-  ReferenceInput,
-  SelectInput,
   DateField,
 } from 'react-admin';
-import { phoneParser } from '../utils';
 import RichTextInput from 'ra-input-rich-text';
 
 import './styles.css';
