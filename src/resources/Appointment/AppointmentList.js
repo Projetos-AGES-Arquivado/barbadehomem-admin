@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   List,
@@ -9,7 +9,6 @@ import {
   EditButton,
   ReferenceField,
   SelectInput,
-  DateInput,
 } from 'react-admin';
 
 import './styles.css';
@@ -35,6 +34,7 @@ export const AppointmentList = props => {
   return (
     <List
       {...props}
+      sort={{ field: 'date', order: 'ASC' }}
       filters={<AppointmentFilter />}
       bulkActionButtons={false}
       className="appointment-list"
@@ -60,11 +60,7 @@ export const AppointmentList = props => {
 
         <StatusField source="status" sortBy="status" />
 
-        <DateField
-          source="date"
-          locales="pt-BR"
-          options={{ timeZone: 'UTC' }}
-        />
+        <DateField source="date" />
 
         <EditButton label="Detalhes" />
       </Datagrid>
