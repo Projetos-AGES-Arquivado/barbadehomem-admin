@@ -41,7 +41,7 @@ const messages = {
           barber: 'Barbeiro',
         },
       },
-      servicos: {
+      services: {
         name: 'Serviço |||| Serviços',
         fields: {
           cost: 'Preço',

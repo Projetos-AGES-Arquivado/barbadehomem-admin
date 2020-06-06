@@ -16,6 +16,7 @@ export const ServiceList = props => {
     <List
       {...props}
       bulkActionButtons={false}
+      className="service-list"
     >
       <Datagrid>
         <TextField source="titleService" />
