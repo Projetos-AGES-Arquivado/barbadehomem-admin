@@ -41,6 +41,12 @@ const messages = {
           barber: 'Barbeiro',
         },
       },
+      payment_methods: {
+        name: 'Método de pagamento |||| Métodos de pagamento',
+        fields: {
+          method: 'Método'
+        }
+      }
     },
   }),
 };
