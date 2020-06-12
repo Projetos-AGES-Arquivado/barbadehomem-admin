@@ -10,6 +10,8 @@ import {
   ReferenceField,
   SelectInput,
   DateInput,
+  FunctionField,
+  TextInput,
 } from 'react-admin';
 
 import './styles.css';
@@ -28,8 +30,15 @@ const AppointmentFilter = props => (
       ]}
       alwaysOn
     />
+
+    <DateInput source="date" />
   </Filter>
 );
+
+const DateFilter = props => {
+  console.log(props.record);
+  return <DateInput {...props} />;
+};
 
 export const AppointmentList = props => {
   return (
@@ -60,11 +69,7 @@ export const AppointmentList = props => {
 
         <StatusField source="status" sortBy="status" />
 
-        <DateField
-          source="date"
-          locales="pt-BR"
-          options={{ timeZone: 'UTC' }}
-        />
+        <DateField source="date" />
 
         <EditButton label="Detalhes" />
       </Datagrid>
