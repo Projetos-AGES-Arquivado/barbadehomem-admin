@@ -41,6 +41,15 @@ const messages = {
           barber: 'Barbeiro',
         },
       },
+      services: {
+        name: 'Serviço |||| Serviços',
+        fields: {
+          cost: 'Preço',
+          description: 'Descrição',
+          duration: 'Duração',
+          titleService: 'Titulo do serviço',
+        },
+      },
     },
   }),
 };
