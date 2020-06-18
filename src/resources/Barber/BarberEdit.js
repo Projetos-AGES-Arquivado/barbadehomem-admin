@@ -33,6 +33,15 @@ const BarberEdit = props => {
             ]}
           />
           <TextInput source="email" />
+
+          <SelectInput
+            source="isAvailable"
+            label="Disponibilidade"
+            choices={[
+              { id: true, name: 'Disponível' },
+              { id: false, name: 'Indisponível' },
+            ]}
+          />
         </FormTab>
 
         <FormTab label="Endereço">

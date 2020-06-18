@@ -46,7 +46,16 @@ const messages = {
         fields: {
           method: 'Método'
         }
-      }
+      },
+      services: {
+        name: 'Serviço |||| Serviços',
+        fields: {
+          cost: 'Preço',
+          description: 'Descrição',
+          duration: 'Duração',
+          titleService: 'Titulo do serviço',
+        },
+      },
     },
   }),
 };
