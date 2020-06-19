@@ -6,6 +6,7 @@ import {
   SelectInput,
   FormTab,
   TabbedForm,
+  NumberInput,
 } from 'react-admin';
 import { phoneParser } from '../utils';
 
@@ -41,6 +42,12 @@ const BarberCreate = props => {
           <TextInput source="address.street" />
           <TextInput source="address.number" type="number" />
           <TextInput source="address.complement" />
+        </FormTab>
+
+        <FormTab label="Avaliação">
+          <NumberInput source="rate.ratesAverage" initialValue="5.0"/>
+          <NumberInput source="rate.totalAppointments" initialValue="1"/>
+          <NumberInput source="rate.totalStars" initialValue="5"/>
         </FormTab>
       </TabbedForm>
     </Create>
