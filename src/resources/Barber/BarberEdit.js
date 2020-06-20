@@ -8,6 +8,9 @@ import {
   SelectInput,
 } from 'react-admin';
 import { phoneParser } from '../utils';
+import RichTextInput from 'ra-input-rich-text';
+
+import './styles.css';
 
 const BarberEditTitle = ({ record }) => {
   return <span>{record ? `${record.name}` : ''}</span>;
@@ -52,6 +55,14 @@ const BarberEdit = props => {
             <TextInput source="address.number" />
             <TextInput source="address.complement" />
           </FormTab>
+        </FormTab>
+
+        <FormTab label="Observações" source="anotations">
+          <RichTextInput
+            source="observations"
+            label="Obsevações"
+            toolbar={false}
+          />
         </FormTab>
       </TabbedForm>
     </Edit>

@@ -15,8 +15,8 @@ const App = () => (
   <Admin
     dataProvider={dataProvider}
     i18nProvider={i18nProvider}
-    // authProvider={authProvider}
-    // loginPage={Login}
+    authProvider={authProvider}
+    loginPage={Login}
   >
     <Resource name="appointments" {...Appointment} />
     <Resource name="users" {...Customer} />
