@@ -13,15 +13,14 @@ import './styles.css';
 
 export const ServiceList = props => {
   return (
-    <List
-      {...props}
-      bulkActionButtons={false}
-      className="service-list"
-    >
+    <List {...props} bulkActionButtons={false} className="service-list">
       <Datagrid>
         <TextField source="titleService" />
         <TextField source="description" />
-        <NumberField source="cost" />
+        <NumberField
+          source="cost"
+          options={{ style: 'currency', currency: 'BRL' }}
+        />
         <NumberField source="duration" />
 
         <EditButton label="Detalhes" />

@@ -23,7 +23,7 @@ export const BarberList = props => {
         />
 
         <TextField source="transport" />
-        <EmailField source="email" />
+        <TextField source="email" link={false} />
         <EditButton label="Detalhes" />
       </Datagrid>
     </List>

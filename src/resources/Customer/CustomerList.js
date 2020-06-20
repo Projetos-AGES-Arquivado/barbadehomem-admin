@@ -29,8 +29,7 @@ export const CustomerList = props => {
           options={{ timeZone: 'UTC' }}
         />
 
-        <EmailField source="email" />
-        <EditButton label="Detalhes" />
+        <TextField source="email" />
       </Datagrid>
     </List>
   );

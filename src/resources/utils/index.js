@@ -12,3 +12,16 @@ export const phoneParser = v => {
 
   return maskedValue;
 };
+
+export const formatValue = v => {
+  if (v === undefined) return;
+
+  const masked = IMask.createMask({
+    mask: '00.00',
+    lazy: true,
+  });
+
+  const maskedValue = masked.resolve(v);
+
+  return Number(maskedValue);
+};

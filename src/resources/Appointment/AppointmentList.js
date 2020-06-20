@@ -23,7 +23,7 @@ const AppointmentFilter = props => (
         { id: 'pending', name: 'Em análise' },
         { id: 'booked', name: 'Agendado' },
         { id: 'done', name: 'Concluído' },
-        { id: 'canceled', name: 'Cancelado' },
+        { id: 'cancelled', name: 'Cancelado' },
       ]}
       alwaysOn
     />

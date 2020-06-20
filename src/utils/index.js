@@ -6,7 +6,7 @@ export const statusParser = v => {
       return 'Agendado';
     case 'done':
       return 'Concluído';
-    case 'canceled':
+    case 'cancelled':
       return 'Cancelado';
     default:
       return null;

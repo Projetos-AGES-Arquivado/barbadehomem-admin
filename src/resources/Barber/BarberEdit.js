@@ -29,7 +29,7 @@ const BarberEdit = props => {
             source="transport"
             choices={[
               { id: 'Carro', name: 'Carro' },
-              { id: 'Carro', name: 'Moto' },
+              { id: 'Moto', name: 'Moto' },
             ]}
           />
           <TextInput source="email" />
