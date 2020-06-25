@@ -7,13 +7,37 @@ import {
   NumberField,
   EmailField,
   EditButton,
+  CreateButton,
+  TopToolbar,
 } from 'react-admin';
 
 import './styles.css';
 
+const ListActions = ({ basePath, props }) => {
+  return (
+    <TopToolbar {...props}>
+      <CreateButton basePath={basePath} />
+      <EditButton
+        basePath="promotions/g5Cb8vpd5LOJV36uYPYi"
+        label="Promoção Relâmpago"
+      />
+
+      <EditButton
+        basePath="promotions/3ayzIWl3zPblLp3Re2z7"
+        label="Promoção Mensal"
+      />
+    </TopToolbar>
+  );
+};
+
 export const ServiceList = props => {
   return (
-    <List {...props} bulkActionButtons={false} className="service-list">
+    <List
+      {...props}
+      bulkActionButtons={false}
+      className="service-list"
+      actions={<ListActions />}
+    >
       <Datagrid>
         <TextField source="titleService" />
         <TextField source="description" />

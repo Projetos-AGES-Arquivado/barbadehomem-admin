@@ -10,13 +10,14 @@ import Appointment from './resources/Appointment';
 import Customer from './resources/Customer';
 import Payment from './resources/Payment';
 import Services from './resources/Services';
+import Promotions from './resources/Promotions';
 
 const App = () => (
   <Admin
     dataProvider={dataProvider}
     i18nProvider={i18nProvider}
-    authProvider={authProvider}
-    loginPage={Login}
+    // authProvider={authProvider}
+    // loginPage={Login}
   >
     <Resource name="appointments" {...Appointment} />
     <Resource name="users" {...Customer} />
@@ -25,6 +26,7 @@ const App = () => (
     <Resource name="users_addresses" />
     <Resource name="payment_methods" {...Payment} />
     <Resource name="services" {...Services} />
+    <Resource name="promotions" {...Promotions} />
   </Admin>
 );
 

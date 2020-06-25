@@ -30,6 +30,7 @@ export const CustomerList = props => {
         />
 
         <TextField source="email" />
+        <EditButton label="Detalhes" />
       </Datagrid>
     </List>
   );
