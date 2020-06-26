@@ -1,3 +1,7 @@
 .barber-list tr {
   transition: background-color 0.2s;
 }
+
+.ql-editor {
+  min-height: 200px;
+}

@@ -43,9 +43,8 @@ const BarberCreate = props => {
           <TextInput source="address.number" type="number" />
           <TextInput source="address.complement" />
         </FormTab>
-        
-        <FormTab label="Rate">
-          <NumberInput source="rate.ratesAverage" initialValue="5"/>
+        <FormTab label="Avaliação">
+          <NumberInput source="rate.ratesAverage" initialValue="5.0"/>
           <NumberInput source="rate.totalAppointments" initialValue="1"/>
           <NumberInput source="rate.totalStars" initialValue="5"/>
         </FormTab>

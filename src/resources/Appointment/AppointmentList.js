@@ -9,6 +9,7 @@ import {
   EditButton,
   ReferenceField,
   SelectInput,
+  DateInput,
 } from 'react-admin';
 
 import './styles.css';
@@ -27,8 +28,15 @@ const AppointmentFilter = props => (
       ]}
       alwaysOn
     />
+
+    <DateInput source="date" />
   </Filter>
 );
+
+const DateFilter = props => {
+  console.log(props.record);
+  return <DateInput {...props} />;
+};
 
 export const AppointmentList = props => {
   return (
