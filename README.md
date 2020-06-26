@@ -1,3 +1,5 @@
+URL do projeto: https://admin-barba-de-homem.web.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting start
