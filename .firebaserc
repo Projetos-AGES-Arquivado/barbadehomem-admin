@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "barba-de-homem"
+  },
+  "targets": {
+    "barba-de-homem": {
+      "hosting": {
+        "admin-barba-de-homem": [
+          "admin-barba-de-homem"
+        ]
+      }
+    }
+  }
+}
